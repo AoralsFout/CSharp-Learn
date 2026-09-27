@@ -40,7 +40,8 @@ public class V017_Class : ILesson
         // 编译时确定的常量，不能被修改。
         // 通过 Circle.Pi 访问，不能通过类实例访问。
         public const double Pi = 3.1415926;
-        // 只读属性，初始化后不可以修改
+        // 只读字段（readonly）：只能在声明处或构造函数里赋值，之后不能改。
+        // 别和「只读属性」搞混 —— 只读属性长这样：public double Radius { get; }
         public readonly double Radius = radius;
         // 只读计算属性
         public double Area

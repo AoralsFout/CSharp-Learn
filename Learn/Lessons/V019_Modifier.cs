@@ -13,7 +13,7 @@ public class V019_Modifier : ILesson
          * private 私有，只能在当前类中访问
          * internal 内部，只能在当前程序集中访问
          * protected internal 保护内部，只能在当前程序集和派生类中访问
-         * private protected 私有保护，只能在当前类和派生类中访问
+         * private protected 私有保护，只能在当前类和派生类中访问，且必须在同一程序集内
         */
     }
 }

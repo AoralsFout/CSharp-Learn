@@ -12,7 +12,9 @@ public class V010_operator : ILesson
         Console.WriteLine($"{a} + {b} = {a + b}");
         Console.WriteLine($"{a} - {b} = {a - b}");
         Console.WriteLine($"{a} * {b} = {a * b}");
-        Console.WriteLine($"{a} / {b} = {(double)(a / b)}");
+        // ❌ 原来写的是 (double)(a / b)：先做整数除法得 0，再转 double，结果还是 0
+        // ✅ 先把操作数转成 double，除法才会按小数进行
+        Console.WriteLine($"{a} / {b} = {(double)a / b}");   // 0.6
         Console.WriteLine($"{a} % {b} = {a % b}");
 
         int i = 1;
