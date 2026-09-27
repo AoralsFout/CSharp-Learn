@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    .csproj = 项目文件（C# Project）。
+    它告诉编译器：这是个什么项目、编译成什么、用哪个版本的 .NET。
+    注意 TargetFramework 必须和你装的 SDK 大版本一致（net10.0 对应 .NET 10）。
+  -->
+  <PropertyGroup>
+    <!-- Exe = 生成可执行程序；改成 Library 就是生成类库 -->
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <!-- 可空引用类型检查，帮你提前发现 null 相关的 bug -->
+    <Nullable>enable</Nullable>
+    <!-- 自动帮你 using 常用命名空间（System、System.Collections.Generic 等） -->
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

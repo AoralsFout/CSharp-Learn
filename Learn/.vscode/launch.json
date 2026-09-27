@@ -1,0 +1,43 @@
+{
+  // 按 F5 时用哪套配置，由左上角下拉框选的 name 决定。
+  // 这里给两个，都指向同一个 Learn.dll，区别只在「有没有带编号参数」。
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // 不带参数 → 程序打印菜单，在终端里输编号。
+      // 想连续试好几个练习时用这个。
+      "name": "练习：打开菜单",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/Learn.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    },
+    {
+      // 带编号参数 → 跳过菜单直奔某个练习。
+      // 按 F5 后会弹输入框问你要几号，等价于 dotnet run -- 3
+      "name": "练习：指定编号",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net10.0/Learn.dll",
+      "args": ["${input:lessonNumber}"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    }
+  ],
+
+  // "inputs" 定义上面 ${input:lessonNumber} 从哪来：弹框让你填。
+  "inputs": [
+    {
+      "id": "lessonNumber",
+      "type": "promptString",
+      "description": "练习编号（1-3；0 = 全部跑一遍）",
+      "default": "1"
+    }
+  ]
+}

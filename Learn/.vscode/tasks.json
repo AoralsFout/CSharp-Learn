@@ -1,0 +1,19 @@
+{
+  // 按 F5 时，VS Code 先跑这里定义的 "build" 任务，再启动调试器。
+  // label 必须和 launch.json 里的 preLaunchTask 对得上。
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/Learn.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary;ForceNoAlign"
+      ],
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}
