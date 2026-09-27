@@ -44,6 +44,10 @@ ILesson[] lessons =
     new V030_Generic(),
     new V031_GenericConstraints(),
     new V032_GenericCollection(),
+    new V033_AsyncAndAwait(),
+    new V034_IOBound(),
+    new V035_CPUBound(),
+    new V036_AsynchronousStateMachine(),
 };
 
 // ── 带了编号参数就直接跑，跳过菜单：dotnet run -- 3 ──

@@ -28,7 +28,7 @@ public class V009_Exception : ILesson
 
         try
         {
-            int result = int.Parse(Console.ReadLine());
+            int? result = int.TryParse(Console.ReadLine(), out int resultInt) ? resultInt : null;
             Console.WriteLine(result);
         }
         catch (FormatException)

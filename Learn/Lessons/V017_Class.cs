@@ -32,9 +32,6 @@ public class V017_Class : ILesson
             Name = name;
             Age = age;
         }
-        public Person()
-        {
-        }
     }
 
     // 主构造函数
@@ -66,11 +63,6 @@ public class V017_Class : ILesson
         {
             Person p = new("张三", 18);
             Console.WriteLine($"姓名：{p.Name}，年龄：{p.Age}");
-            Person p2 = new()
-            {
-                Name = "李四",
-                Age = 150
-            };
             Person p1 = new("李四", 150);
             Console.WriteLine($"姓名：{p1.Name}，年龄：{p1.Age}");
         }
